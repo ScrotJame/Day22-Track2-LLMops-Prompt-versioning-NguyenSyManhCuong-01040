@@ -142,7 +142,7 @@ def run_ragas_eval(rag_results: list, version: str) -> dict:
     llm_eval = get_llm(temperature=0)
     emb_eval = get_embeddings()
 
-    run_config = RunConfig(max_workers=1, max_wait=360, timeout=360, max_retries=10)
+    run_config = RunConfig(max_workers=1, max_wait=250, timeout=250, max_retries=5)
 
     result = evaluate(
         dataset,
